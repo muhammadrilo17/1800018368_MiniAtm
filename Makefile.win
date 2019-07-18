@@ -1,0 +1,33 @@
+# Project: TUGAS MESIN ATM
+# Makefile created by Dev-C++ 5.2.0.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = TUGAS_MESIN_ATM_private.res
+OBJ      = ATM.o $(RES)
+LINKOBJ  = ATM.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lwinmm  
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+BIN      = "TUGAS MESIN ATM.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "TUGAS MESIN ATM.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "TUGAS MESIN ATM.exe" $(LIBS)
+
+ATM.o: ATM.cpp
+	$(CPP) -c ATM.cpp -o ATM.o $(CXXFLAGS)
+
+TUGAS_MESIN_ATM_private.res: TUGAS_MESIN_ATM_private.rc 
+	$(WINDRES) -i TUGAS_MESIN_ATM_private.rc --input-format=rc -o TUGAS_MESIN_ATM_private.res -O coff 

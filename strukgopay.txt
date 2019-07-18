@@ -1,0 +1,9 @@
+            TOP UP GO-PAY
+-----------------------------------------
+NO.         : 085849202582
+NAMA        : Eko Muhammad Rilo Pembudi
+JENIS       : MERCHANT
+JMLH TOPUP  : RP. 100.000
+ADMIN BANK  : RP. 0
+TOTAL       : RP. 100.000
+-----------------------------------------
